@@ -14,7 +14,7 @@ documentation = "https://strawberry.rocks/"
 
 classifiers = [
     "Topic :: Software Development :: Libraries",
-    "Topic :: Software Development :: Libraries :: Python Modules"
+    "Topic :: Software Development :: Libraries :: Python Modules",
 ]
 include = ["strawberry/py.typed"]
 
@@ -33,6 +33,7 @@ typing_extensions = "^3.7.4"
 opentelemetry-api = {version = "^0.13b0",optional = true}
 opentelemetry-sdk = {version = "^0.13b0",optional = true}
 python-dateutil = "^2.7.0"
+pydantic = {version = "^1.6.1", optional = true}
 
 [tool.poetry.dev-dependencies]
 pytest = "^6.1"
@@ -65,6 +66,7 @@ django = {version = ">=2,<4",optional = false}
 django = ["django","pytest-django"]
 flask = ["flask","pytest-flask"]
 opentelemetry = ["opentelemetry-api","opentelemetry-sdk"]
+pydantic = ["pydantic"]
 
 [tool.poetry.scripts]
 strawberry = "strawberry.cli:run"
