@@ -163,6 +163,7 @@ def enum_hook(ctx: DynamicClassDefContext) -> None:
         ctx.name, SymbolTableNode(GDEF, type_alias, plugin_generated=False)
     )
 
+
 def strawberry_pydantic_class_callback(ctx: ClassDefContext):
     # in future we want to have a proper pydantic plugin, but for now
     # let's fallback to any, some resources are here:
@@ -219,8 +220,9 @@ class StrawberryPlugin(Plugin):
         if any(
             strawberry_decorator in fullname
             for strawberry_decorator in {
-                "strawberry.pydantic.type",
-                "strawberry.pydantic.input",
+                "strawberry.beta.pydantic.type",
+                "strawberry.beta.pydantic.input",
+                "strawberry.beta.pydantic.error_type",
             }
         ):
             return strawberry_pydantic_class_callback
