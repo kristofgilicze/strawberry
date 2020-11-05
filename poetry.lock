@@ -539,7 +539,7 @@ name = "pydantic"
 version = "1.7.2"
 description = "Data validation and settings management using python 3.6 type hinting"
 category = "main"
-optional = true
+optional = false
 python-versions = ">=3.6"
 
 [package.extras]
@@ -941,7 +941,7 @@ pydantic = ["pydantic"]
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.7"
-content-hash = "d6b4208916c30b5766243b7e801a9ed8a5a6f05ef725e9c9b0a25034154a5620"
+content-hash = "577c528b1ca3ac4db61fc9f75c6523b032baa546acb3ca4eaf24623cfa326e9f"
 
 [metadata.files]
 appdirs = [
